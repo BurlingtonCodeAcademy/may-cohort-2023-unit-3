@@ -193,4 +193,71 @@ numArray.map(x => {
 
 console.log(fizzBuzzArray);
 
+//! Destructuring, Spread, and Rest
+const fullName = ["Jane", "Doe"];
+// const firstName = fullName[0];
+// const lastName = fullName[1];
+// console.log(`${firstName} ${lastName}`);
+
+const [firstName, lastName] = fullName;
+console.log(`After Destructure: ${firstName} ${lastName}`);
+/* 
+    - pulls the values from the variable array. 
+        - const fullName
+    - stores based off their original position
+        - [ one, two ]
+        - [ "Jane", "Doe"]
+*/
+
+//? Spread Operator
+/* 
+    denoted with: "..."
+    - pulls out all elements of an array and gives them to you as a standalone list of elements.
+*/
+
+const copiedFullName = [...fullName]; // individual values
+console.log('Spread: ', copiedFullName);
+const copiedFullName2 = [fullName]; // nests an array within this array
+console.log('Not Spread: ', copiedFullName2);
+
+fullName.push("Mrs.");
+console.log('Original: ', fullName, "Spread: ", copiedFullName);
+
+//* with Numbers
+console.log(Math.min(1, 5, -3));
+
+const prices = [10.99, 5.99, 3.99, 6.59];
+console.log(Math.min(prices)); // NaN
+console.log(Math.min(...prices)); 
+
+// Anytime that you are working with a funciton / method that requires standalone values, spread op. helps get these values out of an array.
+
+//? Rest Operator
+const newFullName = [
+    'Jane', "Doe", "Mrs.", { month: 3, date: 22, year: 1973}
+];
+
+const [ fName, lName, ...otherInfo ] = newFullName;
+console.log(fName);
+console.log(lName);
+console.log(otherInfo);
+newFullName.push('testOne', 2, false, true);
+let [first, last, , , , ...testData ] = newFullName;
+console.log(first, last, testData);
+// MUST be the last element
+
+console.log(first);
+first = "Jack";
+console.log(first);
+console.log(fName);
+
+const veggies = ['potato', 'lettuce', 'onion', 'leeks'];
+const [plant1,, ...otherPlants] = veggies; 
+console.log(plant1, otherPlants);
+console.log(otherPlants[1]);
+otherPlants.push('lettuce');
+console.log(otherPlants);
+console.log(veggies);
+
+
 
