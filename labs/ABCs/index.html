@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title>
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Random Letter</h1>
+    <h3 id="response"></h3>
+    <br>
+    <button id="btn">ABCs</button>
+
+    <script src="./main.js"></script>
+    
+    <script>
+        const response = document.getElementById('response');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            response.innerText = getLetter();
+        })
+    </script>
+</body>
+</html>
