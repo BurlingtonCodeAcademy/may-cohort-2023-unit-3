@@ -1,3 +1,21 @@
+/* 
+* The Concept
+
+    A player will roll a die if it is in a state to be rolled. On each roll, they will score based off its value. So, we have a few problems to solve:
+        We need a state to hold a players choice.
+        A dictionary, or table, to hold the points depending on the roll.
+    Variables to hold some data:
+        Score
+        The value of our die after its been rolled.
+        The state of the die
+        Number of possible rolls
+        Our game will only allow players to take three chances to score.
+        A way to create a random number from 1 to 6.
+        A way to score our points
+        An action for our player to take that will then hold various conditions.
+        These conditions will need to check if the move is allowed, if the number of rolls are still within range, and provide a response if there is an error. 
+*/
+
 //* Variables
 let score = 0; // default for the start of the turn
 let dieRoll; // a variable to hold our roll value
